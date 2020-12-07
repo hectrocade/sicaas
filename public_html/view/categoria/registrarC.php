@@ -234,7 +234,7 @@ foreach ($usersession as $user) {
                       <div class="form-group col-md-6">
                         <label for="">Nombre</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="NOMBRE" id="" minlength="3" maxlenght="30" pattern="[A-Za-z]{3, 30}" placeholder="Nombre de la categoría" required>
+                        <input type="text" class="form-control" pattern="[A-Za-z]{4,35}" name="NOMBRE" id="" minlength="3" maxlenght="30" pattern="[A-Za-z]{3, 30}" placeholder="Nombre de la categoría" required>
                       </div>
                     </div>
                     <div class="form-row">

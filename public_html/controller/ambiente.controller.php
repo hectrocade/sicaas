@@ -93,39 +93,43 @@ class ambienteController{
                button: "Continuar",
              });
 
-</script>';	
+            </script>';	
         
 
-        }else{
-        $ambiente = new ambiente();
-        $ambiente->NOMBRE = $_REQUEST['NOMBRE'];
-        $ambiente->ID_SEDE = $_REQUEST['ID_SEDE'];  
-
-        $ambiente =$this->model->Registrar($ambiente);
-            
-
-        require_once 'view/ambiente/ambientenuevo.php';
-            if ($ambiente==1) {
-                echo '<script>
-                swal({
-                   title: "Ambiente registrado correctamente!",
-                   icon: "success",
-                   button: "Continuar",
-                 });
+        }
+        
+        else
+        {
+            $ambiente = new ambiente();
+            $ambiente->NOMBRE = $_REQUEST['NOMBRE'];
+            $ambiente->ID_SEDE = $_REQUEST['ID_SEDE'];  
     
-    </script>';	
-            }else{
-
-                echo '<script>
-                swal({
-                   title: "El ambiente ya existe!",
-                   icon: "error",
-                   button: "Continuar",
-                 });
-    
-    </script>';	
+            $ambiente =$this->model->Registrar($ambiente);
                 
-            }
+    
+            require_once 'view/ambiente/ambientenuevo.php';
+                if ($ambiente==1) {
+                    echo '<script>
+                    swal({
+                       title: "Ambiente registrado correctamente!",
+                       icon: "success",
+                       button: "Continuar",
+                     });
+        
+                    </script>';	
+                    }
+                else{
+        
+                        echo '<script>
+                        swal({
+                           title: "El ambiente ya existe!",
+                           icon: "error",
+                           button: "Continuar",
+                         });
+            
+                         </script>';	
+                        
+                    }
             
         
     }

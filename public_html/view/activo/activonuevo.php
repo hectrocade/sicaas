@@ -233,12 +233,12 @@ foreach ($usersession as $user) {
                       <div class="form-group col-md-6">
                         <label for="inputEmail4">Serial</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="SERIAL" id="inputEmail4" placeholder="Serial del activo" required>
+                        <input type="text" class="form-control" name="SERIAL" id="" pattern="[A-Za-z0-9#-]{4,29}" placeholder="Serial del activo" required>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputEmail4">Marca</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="MARCA" id="inputEmail4" placeholder="Marca del activo" required>
+                        <input type="text" class="form-control" name="MARCA" id="" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1 ]{2,20}" placeholder="Marca del activo" required>
                       </div>
 
                       <div class="form-group col-md-6">

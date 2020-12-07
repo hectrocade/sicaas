@@ -36,7 +36,7 @@ session_destroy();
 						
 						<div class="input-group-prepend">
 						</div>
-						<input type="password" name="codigo" class="form-control" placeholder="Codigo">
+						<input type="password" name="codigo" pattern="[A-Za-z0-9]{4}" class="form-control" placeholder="Codigo">
 					</div>
 					<div class="form-group">
 						<input type="submit" value="Verificar" class="btn float-right login_btn">

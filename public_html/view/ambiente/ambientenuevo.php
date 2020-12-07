@@ -233,7 +233,7 @@ foreach ($usersession as $user) {
                       <div class="form-group col-md-6">
                         <label for="inputEmail4">Nombre:</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="NOMBRE" id="inputEmail4" placeholder="Nombre del ambiente" required>
+                        <input type="text" class="form-control" name="NOMBRE" id="inputEmail4" placeholder="Nombre del ambiente" pattern="[A-Za-z]{3,30}" required>
                       </div>
                       <div class="form-group col-md-6">
                       <label>Sede</label>

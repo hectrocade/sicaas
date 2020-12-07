@@ -24,22 +24,53 @@ class usuarioambienteController{
 
     
     public function Guardar(){
-        $usuarioambiente = new usuarioambiente();
-        $usuarioambiente->USUARIO = $_REQUEST['ID_USUARIO'];
-        $usuarioambiente->AMBIENTE = $_REQUEST['ID_AMBIENTE'];  
-        $resultado=$this->model->Registrar($usuarioambiente);
+        if($_REQUEST['ID_USUARIO']==0){
+            require_once 'view/asignacionU/asignarU.php';
 
-        require_once 'view/asignacionU/asignarU.php';
-
-        if ($resultado==1) {
             echo '<script>
             swal({
-               title: "Cuentadante asignado correctamente!",
-               icon: "success",
+               title: "Debe seleccionar un cuentadante!",
+               icon: "error",
                button: "Continuar",
              });
 
-</script>';	
+            </script>';	
+        
+
+        }
+        
+        else if($_REQUEST['ID_AMBIENTE']==0)
+        {
+            require_once 'view/asignacionU/asignarU.php';
+
+            echo '<script>
+            swal({
+               title: "Debe seleccionar un ambiente!",
+               icon: "error",
+               button: "Continuar",
+             });
+
+            </script>';	
+        }
+        
+        else{
+            $usuarioambiente = new usuarioambiente();
+            $usuarioambiente->USUARIO = $_REQUEST['ID_USUARIO'];
+            $usuarioambiente->AMBIENTE = $_REQUEST['ID_AMBIENTE'];  
+            $resultado=$this->model->Registrar($usuarioambiente);
+    
+            require_once 'view/asignacionU/asignarU.php';
+    
+            if ($resultado==1) {
+                echo '<script>
+                swal({
+                   title: "Cuentadante asignado correctamente!",
+                   icon: "success",
+                   button: "Continuar",
+                 });
+    
+                </script>';	
+            }
         }
     }
 

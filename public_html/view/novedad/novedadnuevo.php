@@ -272,7 +272,7 @@ foreach ($usersession as $user) {
                     
                     <div class="form-group" id="dato" >
                       <label for="inputAddress2">Observacion</label>
-                      <textarea name="DESCRIPCION" id="" class="form-control" required placeholder="Ingrese la novedad del activo"></textarea>
+                      <textarea name="DESCRIPCION" id="" maxlenght="500" class="form-control" required placeholder="Ingrese la novedad del activo"></textarea>
                     </div>
                 
                   <div class="card-footer text-right">

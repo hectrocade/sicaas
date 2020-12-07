@@ -234,17 +234,17 @@ foreach ($usersession as $user) {
                       <div class="form-group col-md-6">
                         <label for="">Nombre</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="NOMBRE" id="" placeholder="Nombre de la sede" required>
+                        <input type="text" class="form-control" name="NOMBRE" id="" placeholder="Nombre de la sede" pattern="[A-Za-z0-9 ]{5,50}" required>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="">Dirección</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="DIRECCION" id="" placeholder="Dirección de la sede" required>
+                        <input type="text" class="form-control" name="DIRECCION" id="" placeholder="Dirección de la sede" pattern="[A-Za-z0-9#-]{5,60}" required>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="">Teléfono</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="TELEFONO" id="" placeholder="Teléfono de la sede" required>
+                        <input type="text" class="form-control" name="TELEFONO" id="" placeholder="Teléfono de la sede" pattern="[0-9]{7,7}"required>
                       </div>
                     </div>
                     

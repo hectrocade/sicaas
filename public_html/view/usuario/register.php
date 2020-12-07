@@ -38,7 +38,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span
+            <a href="?c=menu"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span
                 class="logo-name">SICAAS</span>
             </a>
           </div>
@@ -68,36 +68,36 @@
 
                         <label for="identificacion">Número de identificación:</label>
                         <label class="text-danger">*</label>
-                        <input type="text" class="form-control" name="IDENTIFICACION" id="IDENTIFICACION" placeholder="Ingrese su número de cedula" required>
+                        <input type="text" class="form-control" pattern="[0-9]{5,10}" name="IDENTIFICACION" id="IDENTIFICACION" placeholder="Ingrese su número de cedula" required>
               
                       </div>
                       <div class="form-group col-md-4">
                       <label>Nombre:</label>
                       <label class="text-danger">*</label>
-                      <input type="text" class="form-control" name="NOMBRE" id="NOMBRE" placeholder="Ingrese su nombre completo" required>
+                      <input type="text" class="form-control" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1 ]{5,100}" name="NOMBRE" id="NOMBRE" placeholder="Ingrese su nombre completo" required>
 
                       </div>
                       <div class="form-group col-md-4">
                       <label>Número celular:</label>
                       <label class="text-danger">*</label>
-                      <input type="text" class="form-control" name="CELULAR" id="CELULAR" placeholder="Digite su número de celular" required>
+                      <input type="text" class="form-control" minlength="10"  pattern="[0-9]{10}" name="CELULAR" id="CELULAR" placeholder="Digite su número de celular" required>
                       </div>
                     </div>
                     <div class="form-row">
                     <div class="form-group col-md-4">
   <label for="inputEmail4">Telefono:</label>
   <label class="text-danger">*</label>
-  <input type="text" class="form-control" name="TELEFONO" id="TELEFONO" placeholder="Digite su número de telefono" required>
+  <input type="text" class="form-control" minlength="7"  pattern="[0-9]{7}" name="TELEFONO" id="TELEFONO" placeholder="Digite su número de telefono" required>
 </div>
 <div class="form-group col-md-4">
 <label>Dirección:</label>
 <label class="text-danger">*</label>
-<input type="text" class="form-control" name="DIRECCION" id="DIRECCION" placeholder="Digite su dirección de residencia" required>
+<input type="text" class="form-control" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1 ]{5,100}" name="DIRECCION" id="DIRECCION" placeholder="Digite su dirección de residencia" required>
 </div>
 <div class="form-group col-md-4">
 <label>Correo electrónico</label>
 <label class="text-danger">*</label>
-<input type="email" class="form-control" name="CORREO" id="CORREO" placeholder="Digite su dirección de correo" required>
+<input type="email" class="form-control" maxlenght="100" name="CORREO" id="CORREO" placeholder="Digite su dirección de correo" required>
 </div>
 </div>
 <div>Al hacer clic en "Registrarse", aceptas nuestras Condiciones y <a href="?c=usuario&a=Politica" target="_blank">la Política de datos</a> </div>

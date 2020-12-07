@@ -254,7 +254,7 @@ foreach ($usersession as $user) {
 
                     <div class="form-group" id="dato" style="display:none" >
                       <label for="inputAddress2">Observacion</label>
-                      <textarea name="DESCRIPCION_AMBIENTE" id="" class="form-control"></textarea>
+                      <textarea name="DESCRIPCION_AMBIENTE" id="" maxlenght="500" class="form-control"></textarea>
                     </div>
                     
                     <div class="form-row">

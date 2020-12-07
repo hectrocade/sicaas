@@ -40,26 +40,56 @@ class activoambienteController{
 
     
     public function Guardar(){
-        $activoambiente = new activoambiente();
-        $activoambiente->NOMBRE = $_REQUEST['ID_AMBIENTE'];
-        $activoambiente->ID_ACTIVO = $_REQUEST['ID_ACTIVO'];  
-  
-        require_once 'view/activoambiente/registrarAA.php';
+        if($_REQUEST['ID_AMBIENTE']==0){
+            require_once 'view/activoambiente/registrarAA.php';
 
-  
-            
-             $resultado=$this->model->Registrar($activoambiente);
+            echo '<script>
+            swal({
+               title: "Debe seleccionar un ambiente!",
+               icon: "error",
+               button: "Continuar",
+             });
 
-             if ($resultado==1) {
-                echo '<script>
-                swal({
-                   title: "Activo asignado correctamente!",
-                   icon: "success",
-                   button: "Continuar",
-                 });
+            </script>';
+        
+
+        }
+        
+        else if($_REQUEST['ID_ACTIVO']==0)
+        {
+            require_once 'view/activoambiente/registrarAA.php';
+
+            echo '<script>
+            swal({
+               title: "Debe seleccionar un activo!",
+               icon: "error",
+               button: "Continuar",
+             });
+
+            </script>';	
+        
+        }
+        
+        else{
+            $activoambiente = new activoambiente();
+            $activoambiente->NOMBRE = $_REQUEST['ID_AMBIENTE'];
+            $activoambiente->ID_ACTIVO = $_REQUEST['ID_ACTIVO'];  
+      
+            require_once 'view/activoambiente/registrarAA.php';
+                
+                 $resultado=$this->model->Registrar($activoambiente);
     
-    </script>';	
-            }
+                 if ($resultado==1) {
+                    echo '<script>
+                    swal({
+                       title: "Activo asignado correctamente!",
+                       icon: "success",
+                       button: "Continuar",
+                     });
+        
+                    </script>';	
+                }
+        }
     }
     public function Editar(){
         $activoambiente = new ambiente();

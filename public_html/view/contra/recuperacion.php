@@ -36,7 +36,7 @@ session_destroy();
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 						</div>
-						<input type="text" name="DOCUMENTO" class="form-control" placeholder="Ingrese su número de identificación">
+						<input type="text" name="DOCUMENTO" pattern="[0-9]{9,12}" class="form-control" placeholder="Ingrese su número de identificación">
 					</div>
 					<div class="form-group">
 						<input type="submit" value="Enviar" class="btn float-right login_btn">

@@ -31,7 +31,7 @@ class activoController{
         }
 
         
-       $this -> model -> Listar($OPTION,$VALUE);
+       
     }
 
     public function Index2(){
@@ -61,6 +61,18 @@ class activoController{
 
     
     public function Guardar(){
+        
+        if ($_REQUEST['ID_CATEGORIA']==0) {
+            require_once 'view/activo/activonuevo.php';
+                echo '<script>
+                swal({
+                   title: "Seleccione una categoria!",
+                   icon: "error",
+                   button: "Continuar",
+                 });
+    
+                </script>';	
+            }else{
         $activo = new activo();
         $activo->SERIAL_A = $_REQUEST['SERIAL'];
         $activo->MARCA = $_REQUEST['MARCA'];  
@@ -77,6 +89,7 @@ class activoController{
                  });
     
                 </script>';	
+            }
             }
     }
 
